@@ -15,6 +15,26 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Window.Styles>
+        <Style Selector="Button">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Padding" Value="15,10,0,10"/>
+            <Setter Property="MinWidth" Value="200"/>
+            <Setter Property="Background" Value="Black"/>
+        </Style>
+    </Window.Styles>
+
+
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="400,0,0,0">
+        <Rectangle Width="2" Fill="White" Margin="0,0,30,0"/>
+        <StackPanel>
+            <TextBlock Margin="0,0,0,50" FontSize="80">P O N G</TextBlock>
+            <Button Content="Start"/>
+            <Button Content="Highscores"/>
+            <Button Content="Settings"/>
+            <Button Content="Quit"/>
+        </StackPanel>
+    </StackPanel>
 
 </Window>
