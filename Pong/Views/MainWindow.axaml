@@ -7,7 +7,9 @@
         x:Class="Pong.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="Pong">
+        Title="Pong"
+        Content="{Binding CurrentView}">
+
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -16,7 +18,7 @@
     </Design.DataContext>
 
     <Window.Styles>
-        <Style Selector="Button">
+        <Style Selector="Button.MainMenuButton">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="Margin" Value="0,0,0,10"/>
             <Setter Property="Padding" Value="15,10,0,10"/>
@@ -24,17 +26,5 @@
             <Setter Property="Background" Value="Black"/>
         </Style>
     </Window.Styles>
-
-
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="400,0,0,0">
-        <Rectangle Width="2" Fill="White" Margin="0,0,30,0"/>
-        <StackPanel>
-            <TextBlock Margin="0,0,0,50" FontSize="80">P O N G</TextBlock>
-            <Button Content="Start"/>
-            <Button Content="Highscores"/>
-            <Button Content="Settings"/>
-            <Button Content="Quit"/>
-        </StackPanel>
-    </StackPanel>
 
 </Window>

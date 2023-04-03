@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace Pong.Views;
 
-public partial class Game : UserControl
+public partial class MainMenuView : UserControl
 {
-    public Game()
+    public MainMenuView()
     {
         InitializeComponent();
     }

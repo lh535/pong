@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="550"
+             x:Class="Pong.Views.MainMenuView">
+
+
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="400,0,0,0">
+        <Rectangle Width="2" Fill="White" Margin="0,0,30,0"/>
+        <StackPanel>
+            <TextBlock Margin="0,0,0,50" FontSize="80">P O N G</TextBlock>
+            <Button Classes="MainMenuButton" Content="Start"
+                    Command="{Binding $parent[Window].DataContext.StartGame}"/>
+            <Button Classes="MainMenuButton" Content="Highscores"/>
+            <Button Classes="MainMenuButton" Content="Settings"/>
+            <Button Classes="MainMenuButton" Content="Quit"/>
+        </StackPanel>
+    </StackPanel>
+
+
+</UserControl>
